@@ -3,24 +3,23 @@ package com.example.player.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "team")
+@Table(name="team")
 public class Player {
-
     @Id
+    @Column(name="playerid")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "playerid")
     private int playerId;
 
-    @Column(name = "playername")
+    @Column(name="playername")
     private String playerName;
 
-    @Column(name = "jerseynumber")
+    @Column(name="jerseynumber")
     private int jerseyNumber;
 
-    @Column(name = "role")
+    @Column(name="role")
     private String role;
 
-    public Player() {}
+    public Player(){}
 
     public Player(int playerId, String playerName, int jerseyNumber, String role) {
         this.playerId = playerId;
@@ -32,6 +31,7 @@ public class Player {
     public int getPlayerId() {
         return playerId;
     }
+
     public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }
@@ -39,6 +39,7 @@ public class Player {
     public String getPlayerName() {
         return playerName;
     }
+
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
@@ -46,6 +47,7 @@ public class Player {
     public int getJerseyNumber() {
         return jerseyNumber;
     }
+
     public void setJerseyNumber(int jerseyNumber) {
         this.jerseyNumber = jerseyNumber;
     }
@@ -53,7 +55,9 @@ public class Player {
     public String getRole() {
         return role;
     }
+
     public void setRole(String role) {
         this.role = role;
     }
+
 }
